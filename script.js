@@ -7,14 +7,31 @@ const quotes = [
 "'Play to your strengths. If you aren’t great at something, do more of what you’re great at.' -Jason Lemkin",
 "'Every great dream begins with a dreamer. Always remember, you have within you the strength, the patience, and the passion to reach for the stars to change the world.' -Harriet Tubman"
 ];
+
+function generateColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for(let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 function generateQuote() {
    const random = Math.floor(Math.random() * quotes.length);
-   quoteContainer.textContent = quotes[random];
+   quoteContainer.textContent = quotes[random];  
+   const color = generateColor();
+   console.log(color);
+   p.textContent = color;
+   document.body.style.backgroundColor = generateColor();
 }
 
 
 const quoteContainer = document.getElementById('quote-container');
 const btn = document.getElementById('quote-generator');
+const p = document.createElement('p');
+document.body.appendChild(p);
+
 
 btn.addEventListener('click',generateQuote);
 

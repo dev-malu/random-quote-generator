@@ -1,0 +1,21 @@
+#quote-container {
+    background-color: antiquewhite;
+    height: 50vh;
+    width: 65vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    border: 5px solid wheat;
+    margin: 150px;
+}
+
+#quote-generator {
+    padding: 8px;
+    background-color: rgb(94, 94, 243);
+    border: none;
+    color: white;
+    border-radius: 2px;
+    font-weight: 500;
+    margin: -50px 500px;
+}
